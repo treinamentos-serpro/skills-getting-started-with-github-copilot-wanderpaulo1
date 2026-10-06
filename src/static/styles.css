@@ -89,14 +89,36 @@ section h3 {
 .participants-list {
   display: grid;
   gap: 5px;
-  padding-left: 20px;
+  padding-left: 0;
+  list-style: none;
   color: #475569;
   font-size: 0.9rem;
   overflow-wrap: anywhere;
 }
 
-.participants-list li::marker {
-  color: #0f766e;
+.participants-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.remove-participant {
+  flex: 0 0 auto;
+  padding: 4px 7px;
+  background-color: transparent;
+  color: #c62828;
+  font-size: 16px;
+  line-height: 1;
+}
+
+.remove-participant:hover:not(:disabled) {
+  background-color: #ffebee;
+}
+
+.remove-participant:disabled {
+  cursor: wait;
+  opacity: 0.6;
 }
 
 .participants-empty {
