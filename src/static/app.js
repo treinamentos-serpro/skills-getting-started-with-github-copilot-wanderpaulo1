@@ -73,6 +73,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 messageDiv.textContent = error.message || "Não foi possível remover o participante.";
                 messageDiv.className = "error";
                 messageDiv.classList.remove("hidden");
+              } finally {
+                removeButton.disabled = false;
               }
             });
             participantItem.appendChild(removeButton);
